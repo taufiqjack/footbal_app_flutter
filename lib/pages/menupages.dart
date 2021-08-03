@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MenuPage extends StatefulWidget {
   MenuPage({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _MenuPageState extends State<MenuPage> {
   @override
   void initState() {
     super.initState();
-    defaultChoiceIndex = 0;
+    defaultChoiceIndex = 1;
   }
 
   @override
@@ -47,11 +48,16 @@ class _MenuPageState extends State<MenuPage> {
           padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
           child: Column(
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 10),
+              Align(
+                alignment: Alignment.centerLeft,
                 child: Text(
                   'Top today’s\nmatches for you',
+                  style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.bold, fontSize: 32),
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10),
               ),
               Wrap(
                 spacing: 15,
@@ -75,10 +81,216 @@ class _MenuPageState extends State<MenuPage> {
                       },
                       elevation: 1,
                       padding: EdgeInsets.symmetric(
-                        horizontal: 15,
+                        horizontal: 17,
                       ));
                 }),
               ),
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+              ),
+              Card(
+                child: Container(
+                  height: 213,
+                  width: 366,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                  borderRadius: BorderRadius.circular(5)),
+                              height: 20,
+                              width: 50,
+                              child: Center(
+                                child: Text(
+                                  'LIVE',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10)),
+                          Image.asset(
+                            'assets/images/premierleague.png',
+                          ),
+                          Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
+                          Text(
+                            'English Premier League',
+                            style: GoogleFonts.montserrat(),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10)),
+                          Icon(
+                            Icons.notifications_rounded,
+                            color: Colors.purple,
+                          ),
+                        ],
+                      ),
+                      Padding(padding: EdgeInsets.all(15)),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            child: Image.asset(
+                              'assets/images/leicaster.png',
+                            ),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 15)),
+                          Column(
+                            children: [
+                              Text('17.06.2021',
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 12, color: Colors.grey)),
+                              Text(
+                                '2 : 0',
+                                style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.bold, fontSize: 30),
+                              ),
+                              Text('Fulltime',
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 12, color: Colors.grey)),
+                            ],
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 25)),
+                          Image.asset(
+                            'assets/images/sheffield.png',
+                          ),
+                        ],
+                      ),
+                      Padding(padding: EdgeInsets.all(5)),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 25),
+                            child: Text(
+                              'Leicester',
+                              style: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 55),
+                          ),
+                          Text(
+                            'Sheffield',
+                            style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 20),
+              ),
+              Card(
+                child: Container(
+                  height: 213,
+                  width: 366,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                  borderRadius: BorderRadius.circular(5)),
+                              height: 20,
+                              width: 50,
+                              child: Center(
+                                child: Text(
+                                  'LIVE',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10)),
+                          Image.asset(
+                            'assets/images/premierleague.png',
+                          ),
+                          Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
+                          Text(
+                            'English Premier League',
+                            style: GoogleFonts.montserrat(),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10)),
+                          Icon(
+                            Icons.notifications_none_rounded,
+                            color: Colors.purple,
+                          ),
+                        ],
+                      ),
+                      Padding(padding: EdgeInsets.all(15)),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 30),
+                            child: Image.asset(
+                              'assets/images/everton.png',
+                            ),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 15)),
+                          Column(
+                            children: [
+                              Text('17.06.2021',
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 12, color: Colors.grey)),
+                              Text(
+                                '1 : 1',
+                                style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.bold, fontSize: 30),
+                              ),
+                              Text('Fulltime',
+                                  style: GoogleFonts.montserrat(
+                                      fontSize: 12, color: Colors.grey)),
+                            ],
+                          ),
+                          Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 25)),
+                          Image.asset(
+                            'assets/images/astonvilla.png',
+                          ),
+                        ],
+                      ),
+                      Padding(padding: EdgeInsets.all(5)),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 25),
+                            child: Text(
+                              'Everton',
+                              style: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 55),
+                          ),
+                          Text(
+                            'Aston Villa',
+                            style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ));
