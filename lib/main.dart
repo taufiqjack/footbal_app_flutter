@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:footbal_app/pages/menupages.dart';
 
 void main() {
-  runApp(MaterialApp(home: MenuPage()));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MenuPage()));
 }
 
 class MyApp extends StatelessWidget {
