@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:footbal_app/pages/menupages.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(home: MenuPage()));
 }
 
 class MyApp extends StatelessWidget {
